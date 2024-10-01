@@ -1,20 +1,31 @@
+import { FC } from "react";
 import style from "./header.module.css";
+import { Link, NavLink, NavLinkRenderProps } from "react-router-dom";
 
-export const Header: React.FC = () => {
+export const Header: FC = () => {
+  const handleActiveNav = (props: NavLinkRenderProps) => {
+    const { isActive } = props;
+
+    if (isActive) {
+      return style["active_nav_item"];
+    } else {
+      return style["nav_item"];
+    }
+  };
   return (
     <header>
       <div className={style.centerDiv}>
-    <div className={style.logo}>
-        <a href="">Wounder trip</a>
-    </div>
+    <Link className={style["logo"]} to="/">
+        <span>Wounder trip</span>
+    </Link>
     <div className={style.navMenu}>
-         <a href="">About us</a>
-         <a href="">Find trip</a>
-         <a href="">Services</a>
-         <a href="">Contact</a>
+         <NavLink to="/about" className={handleActiveNav}>About us</NavLink>
+         <NavLink to="" className={handleActiveNav}>Find trip</NavLink>
+         <NavLink to="" className={handleActiveNav}>Services</NavLink>
+         <NavLink to=""className={handleActiveNav}>Contact</NavLink>
     </div>
 
-</div>
+    </div>
     </header>
   );
 };
