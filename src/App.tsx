@@ -15,7 +15,7 @@ function App() {
             <Suspense
               fallback={
                 <div>
-                 Any problems?
+                 Loadin...
                 </div>
               }
             >
