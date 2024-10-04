@@ -1,4 +1,4 @@
-import { FC } from "react";
+import  { FC} from "react";
 import style from "./header.module.css";
 import { Link, NavLink, NavLinkRenderProps } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export const Header: FC = () => {
          <NavLink to="/about" className={handleActiveNav}>About us</NavLink>
          <NavLink to="" className={handleActiveNav}>Find trip</NavLink>
          <NavLink to="" className={handleActiveNav}>Services</NavLink>
-         <NavLink to=""className={handleActiveNav}>Contact</NavLink>
+         <NavLink to="/contact"className={handleActiveNav}>Contact</NavLink>
     </div>
 
     </div>
