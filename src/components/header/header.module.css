@@ -26,3 +26,6 @@ a{
   display: flex;
   column-gap: 30px;
 }
+.active_nav_item{
+  color: #6e5632;
+}
